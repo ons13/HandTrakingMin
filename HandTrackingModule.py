@@ -2,8 +2,6 @@ import cv2
 import mediapipe as mp
 import time
 
-
-
 class handDetector():
     def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5):
         self.mode = mode
@@ -36,7 +34,7 @@ class handDetector():
                 #print(id, cx, cy)
                 lmList.append([id, cx, cy])
                 if draw:
-                    cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
+                    cv2.circle(img, (cx, cy), 10, (255, 0, 255), cv2.FILLED)
 
             return lmList
 
